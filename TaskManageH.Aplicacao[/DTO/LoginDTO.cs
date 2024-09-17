@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaskManageH.Dominio.Enum
+namespace TaskManageH.Aplicacao_.DTO
 {
-    public enum TipoUsuario
+    internal class LoginDTO
     {
-        Admin = 1,
-        Colaborador = 2,
-        Gerente = 3
     }
 }

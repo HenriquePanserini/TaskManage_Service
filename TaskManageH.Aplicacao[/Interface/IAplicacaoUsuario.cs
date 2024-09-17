@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaskManageH.Dominio.Enum
+namespace TaskManageH.Aplicacao_.Interface
 {
-    public enum TipoUsuario
+    internal interface IServicoUsuario
     {
-        Admin = 1,
-        Colaborador = 2,
-        Gerente = 3
     }
 }

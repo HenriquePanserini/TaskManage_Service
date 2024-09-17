@@ -10,7 +10,7 @@ public class AppDbContext : IdentityDbContext<Usuario>
     {
     }
 
-    public DbSet<Tarefas> Noticia { get; set; }
+    public DbSet<Tarefas> Tarefas { get; set; }
     public DbSet<Usuario> Usuario { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

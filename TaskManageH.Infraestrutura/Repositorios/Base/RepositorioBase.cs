@@ -10,7 +10,7 @@ using TaskManageH.Dominio.Interfaces.Base;
 
 namespace TaskManageH.Infraestrutura.Repositorios.Base
 {
-    internal class RepositorioBase<T> : IRepositorioBase<T>, IDisposable where T : class
+    public class RepositorioBase<T> : IRepositorioBase<T>, IDisposable where T : class
     {
 
         private readonly DbContextOptions<AppDbContext> _OptionsBuilder;
