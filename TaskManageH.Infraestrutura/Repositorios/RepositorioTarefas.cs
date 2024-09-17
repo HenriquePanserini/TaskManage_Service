@@ -6,6 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using TaskManageH.Dominio.Entidades;
+using TaskManageH.Dominio.Enum;
 using TaskManageH.Dominio.Interfaces;
 using TaskManageH.Infraestrutura.Repositorios.Base;
 
@@ -20,7 +21,7 @@ namespace TaskManageH.Infraestrutura.Repositorios
             _optionsbuilder = new DbContextOptions<AppDbContext>();
         }
 
-        public async Task<List<Tarefas>> ListarNoticias(Expression<Func<Tarefas, bool>> exTarefa)
+        public async Task<List<Tarefas>> ListarTarefas(Expression<Func<Tarefas, bool>> exTarefa)
         {
             using (var data = new AppDbContext(_optionsbuilder))
             {

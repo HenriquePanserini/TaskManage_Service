@@ -3,16 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TaskManageH.Dominio.Enum;
+using TaskManageH.Dominio.Validadores;
 
 namespace TaskManageH.Dominio.Entidades
 {
-    public class Tarefas
+    public class Tarefas : ValidadorDeCampos
     {
+        public Tarefas(Notificador notificador) : base(notificador)
+        {
+        }
+
         public int Id { get; set; } // Identificador único
         public string Titulo { get; set; } // Título da tarefa
         public string Descricao { get; set; } // Descrição detalhada da tarefa
         public int Prioridade { get; set; } // Nível de prioridade (1 a 5, por exemplo)
-        public string Status { get; set; } // Status (Ex: "Pendente", "Em Progresso", "Concluída")
+        public StatusTarefa Status { get; set; }  // Usando o enum StatusTarefa
         public DateTime DataCriacao { get; set; } // Data de criação da tarefa
         public DateTime? DataConclusao { get; set; } // Data de conclusão da tarefa (pode ser nula)
         public DateTime Prazo { get; set; } // Prazo final da tarefa
