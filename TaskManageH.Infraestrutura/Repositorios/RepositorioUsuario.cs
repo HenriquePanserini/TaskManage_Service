@@ -72,9 +72,25 @@ namespace TaskManageH.Infraestrutura.Repositorios
 
         }
 
-        public Task<bool> RetornaIdUsuario(string email)
+        public async Task<string> RetornaIdUsuario(string email)
         {
-            throw new NotImplementedException();
+            try
+            {
+
+                using (var data = new AppDbContext(_optionsbuilder))
+                {
+                    var usuario = await data.Usuario.
+                                  Where(u => u.Email.Equals(email)).
+                                  AsNoTracking().
+                                  FirstOrDefaultAsync();
+
+                    return usuario.Id;
+                }
+
+            }catch(Exception ex)
+            {
+                return string.Empty;
+            }
         }
     }
 }

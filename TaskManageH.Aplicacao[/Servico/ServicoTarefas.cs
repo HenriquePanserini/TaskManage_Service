@@ -21,7 +21,7 @@ namespace TaskManageH.Aplicacao_.Servico
             _repositorioTarefas = repositorioTarefas;
         }
 
-        public async Task AdicionaTarefas(Tarefas tarefas, StatusTarefa statusTarefa)
+        public async Task AdicionaTarefas(Tarefas tarefas, StatusTarefa statusTarefa, PrioridadeTarefa prioridade)
         {
             // Validação dos campos obrigatórios
             var validarTitulo = tarefas.ValidarStringVazia(tarefas.Titulo, "Titulo");
@@ -33,13 +33,14 @@ namespace TaskManageH.Aplicacao_.Servico
                 tarefas.DataCriacao = DateTime.Now;
                 tarefas.DataConclusao = null; // Assume que a tarefa não está concluída ainda
                 tarefas.Status = statusTarefa; // Atribui o status da tarefa passado como parâmetro
+                tarefas.Prioridade = prioridade;
 
                 // Adicionando a tarefa ao repositório
                 await _repositorioTarefas.Adicionar(tarefas);
             }
         }
 
-        public async Task AtualizaTarefas(Tarefas tarefas, StatusTarefa statusTarefa)
+        public async Task AtualizaTarefas(Tarefas tarefas, StatusTarefa statusTarefa, PrioridadeTarefa prioridade)
         {
             // Validação dos campos obrigatórios
             var validarTitulo = tarefas.ValidarStringVazia(tarefas.Titulo, "Titulo");
@@ -51,6 +52,7 @@ namespace TaskManageH.Aplicacao_.Servico
                 tarefas.DataCriacao = DateTime.Now;
                 tarefas.DataConclusao = null; // Assume que a tarefa não está concluída ainda
                 tarefas.Status = statusTarefa; // Atribui o status da tarefa passado como parâmetro
+                tarefas.Prioridade = prioridade;
 
                 // Adicionando a tarefa ao repositório
                 await _repositorioTarefas.Atualizar(tarefas);

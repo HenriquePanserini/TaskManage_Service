@@ -17,7 +17,7 @@ namespace TaskManageH.Dominio.Entidades
         public int Id { get; set; } // Identificador único
         public string Titulo { get; set; } // Título da tarefa
         public string Descricao { get; set; } // Descrição detalhada da tarefa
-        public int Prioridade { get; set; } // Nível de prioridade (1 a 5, por exemplo)
+        public PrioridadeTarefa Prioridade { get; set; } // Nível de prioridade (1 a 5, por exemplo)
         public StatusTarefa Status { get; set; }  // Usando o enum StatusTarefa
         public DateTime DataCriacao { get; set; } // Data de criação da tarefa
         public DateTime? DataConclusao { get; set; } // Data de conclusão da tarefa (pode ser nula)

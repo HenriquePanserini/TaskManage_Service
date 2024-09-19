@@ -10,8 +10,8 @@ namespace Dominio.Interfaces.InterfaceServicos
 {
     public interface IServicoTarefas
     {
-        Task AdicionaTarefas(Tarefas tarefas, StatusTarefa statusTarefa);
-        Task AtualizaTarefas(Tarefas tarefas, StatusTarefa statusTarefa);
+        Task AdicionaTarefas(Tarefas tarefas, StatusTarefa statusTarefa, PrioridadeTarefa prioridade);
+        Task AtualizaTarefas(Tarefas tarefas, StatusTarefa statusTarefa, PrioridadeTarefa prioridade);
         Task<List<Tarefas>> ListarTarefasAtivas();
     }
 }

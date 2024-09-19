@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace TaskManageH.Aplicacao_.DTO
 {
-    internal class TarefasDTO
+    public class TarefasDTO
     {
+        public int IdTarefa { get; set; }
+        public string? Titulo { get; set; }
+        public string? Descricao { get; set; }
+        public int Prioridade { get; set; }
+        public string? IdUser { get; set; }
     }
 }

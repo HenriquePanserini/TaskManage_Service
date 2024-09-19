@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace TaskManageH.Aplicacao_.DTO
 {
-    internal class LoginDTO
+    public class LoginDTO
     {
+        public string? email { get; set; }
+        public string? senha { get; set; }
+        public int idade { get; set; }
+        public string? celular { get; set; }
     }
 }

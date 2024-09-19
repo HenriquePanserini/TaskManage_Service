@@ -8,12 +8,12 @@ using TaskManageH.Dominio.Interfaces.Base;
 
 namespace TaskManageH.Dominio.Interfaces
 {
-    public interface IRepositorioUsuario : IRepositorioBase<Usuario> 
+    public interface IRepositorioUsuario
     {
         Task<bool> AdicionaUsuario(string email, string senha, int idade, string celular);
 
         Task<bool> ExisteUsuario(string email, string senha);
 
-        Task<bool> RetornaIdUsuario(string email);
+        Task<string> RetornaIdUsuario(string email);
     }
 }
