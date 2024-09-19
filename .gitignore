@@ -1,6 +1,5 @@
 # Ignore Visual Studio temporary files, build results, and
 # folder-based project configuration
-.DS_Store
 *.log
 .vscode/
 .vs/

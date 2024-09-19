@@ -30,8 +30,8 @@ namespace KaskataDDD.Infrastructure.Data.Mappings
                 .IsRequired();
 
             builder.Property(t => t.Prioridade)
-                .HasColumnName("Prioridade")
-                .IsRequired();
+                .IsRequired()
+                .HasConversion<int>(); // Mapeando o enum para o banco como int
 
             builder.Property(t => t.Status)
                 .HasColumnName("Status")
