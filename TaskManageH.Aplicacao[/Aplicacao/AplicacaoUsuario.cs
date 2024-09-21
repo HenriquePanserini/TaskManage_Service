@@ -28,9 +28,9 @@ namespace TaskManageH.Aplicacao_.Aplicacao
             return await _repositorioUsuario.ExisteUsuario(email, senha);
         }
 
-        public Task<bool> ReturnIdUsuario(string email)
+        public async Task<string> ReturnIdUsuario(string email)
         {
-            throw new NotImplementedException();
+            return await _repositorioUsuario.RetornaIdUsuario(email);
         }
     }
 }

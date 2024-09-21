@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using TaskManageH.Dominio.Enum;
 using TaskManageH.Dominio.Validadores;
+using TaskManageH.Dominio.Validadores.Notifica;
 
 namespace TaskManageH.Dominio.Entidades
 {
-    public class Tarefas : ValidadorDeCampos
+    public class Tarefas : Notificador
     {
-        public Tarefas(Notificador notificador) : base(notificador)
+        public Tarefas()
         {
         }
 
@@ -21,7 +22,7 @@ namespace TaskManageH.Dominio.Entidades
         public StatusTarefa Status { get; set; }  // Usando o enum StatusTarefa
         public DateTime DataCriacao { get; set; } // Data de criação da tarefa
         public DateTime? DataConclusao { get; set; } // Data de conclusão da tarefa (pode ser nula)
-        public DateTime Prazo { get; set; } // Prazo final da tarefa
+        public DateTime? Prazo { get; set; } // Prazo final da tarefa
 
         // Chave estrangeira para o usuário
         public string UsuarioId { get; set; } // Chave estrangeira (assumindo que a chave de User é uma string)
