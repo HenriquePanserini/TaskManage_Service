@@ -10,6 +10,6 @@ namespace TaskManageH.Aplicacao_.Interface
     {
         Task<bool> AdicionaUsuario(string email, string senha, int idade, string celular);
         Task<bool> ExisteUsuario(string email, string senha);
-        Task<bool> ReturnIdUsuario(string email);
+        Task<string> ReturnIdUsuario(string email);
     }
 }

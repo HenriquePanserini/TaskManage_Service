@@ -24,8 +24,8 @@ namespace TaskManageH.Aplicacao_.Servico
         public async Task AdicionaTarefas(Tarefas tarefas, StatusTarefa statusTarefa, PrioridadeTarefa prioridade)
         {
             // Validação dos campos obrigatórios
-            var validarTitulo = tarefas.ValidarStringVazia(tarefas.Titulo, "Titulo");
-            var validarDescricao = tarefas.ValidarStringVazia(tarefas.Descricao, "Descricao");
+            var validarTitulo = tarefas.ValidarPropriedadeString(tarefas.Titulo, "Titulo");
+            var validarDescricao = tarefas.ValidarPropriedadeString(tarefas.Descricao, "Descricao");
 
             if (validarTitulo && validarDescricao)
             {
@@ -43,8 +43,8 @@ namespace TaskManageH.Aplicacao_.Servico
         public async Task AtualizaTarefas(Tarefas tarefas, StatusTarefa statusTarefa, PrioridadeTarefa prioridade)
         {
             // Validação dos campos obrigatórios
-            var validarTitulo = tarefas.ValidarStringVazia(tarefas.Titulo, "Titulo");
-            var validarDescricao = tarefas.ValidarStringVazia(tarefas.Descricao, "Descricao");
+            var validarTitulo = tarefas.ValidarPropriedadeString(tarefas.Titulo, "Titulo");
+            var validarDescricao = tarefas.ValidarPropriedadeString(tarefas.Descricao, "Descricao");
 
             if (validarTitulo && validarDescricao)
             {
