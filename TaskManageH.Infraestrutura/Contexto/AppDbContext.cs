@@ -33,7 +33,7 @@ public class AppDbContext : IdentityDbContext<Usuario>
 
     public string ObterStringConexao()
     {
-        string strcon = "Data Source=DESKTOP-JDDJMQ9\\SQLEXPRESS;Initial Catalog=TaskManage_2024;Trusted_Connection=True;";
+        string strcon = "Data Source=DESKTOP-JDDJMQ9\\SQLEXPRESS;Initial Catalog=TaskManage_2024;Trusted_Connection=True";
         return strcon;
     }
 }
