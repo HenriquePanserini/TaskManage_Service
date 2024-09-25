@@ -9,6 +9,9 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["TaskManageH.WebService/TaskManageH.WebService.csproj", "TaskManageH.WebService/"]
+COPY ["TaskManageH.Aplicacao[/TaskManageH.Aplicacao.csproj", "TaskManageH.Aplicacao[/"]
+COPY ["TaskManageH.Dominio/TaskManageH.Dominio.csproj", "TaskManageH.Dominio/"]
+COPY ["TaskManageH.Infraestrutura/TaskManageH.Infraestrutura.csproj", "TaskManageH.Infraestrutura/"]
 RUN dotnet restore "./TaskManageH.WebService/TaskManageH.WebService.csproj"
 COPY . .
 WORKDIR "/src/TaskManageH.WebService"

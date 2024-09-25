@@ -11,13 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicação", "Aplicação"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebService", "WebService", "{3AC4B6A9-03F4-4642-8DB1-683750927863}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManageH.Aplicacao", "TaskManageH.Aplicacao[\TaskManageH.Aplicacao.csproj", "{8B3B08C3-FF0B-480C-984A-880C6D6FF9D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManageH.Aplicacao", "TaskManageH.Aplicacao[\TaskManageH.Aplicacao.csproj", "{8B3B08C3-FF0B-480C-984A-880C6D6FF9D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManageH.Dominio", "TaskManageH.Dominio\TaskManageH.Dominio.csproj", "{4FCFD490-D373-4C6A-B4EC-BF940FC43D37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManageH.Dominio", "TaskManageH.Dominio\TaskManageH.Dominio.csproj", "{4FCFD490-D373-4C6A-B4EC-BF940FC43D37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManageH.Infraestrutura", "TaskManageH.Infraestrutura\TaskManageH.Infraestrutura.csproj", "{82567A42-501B-4F94-A531-4BAFA7742ED8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManageH.Infraestrutura", "TaskManageH.Infraestrutura\TaskManageH.Infraestrutura.csproj", "{82567A42-501B-4F94-A531-4BAFA7742ED8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManageH.WebService", "TaskManageH.WebService\TaskManageH.WebService.csproj", "{EDB0EB00-23A6-409B-89C6-7DF9B5B12E0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManageH.WebService", "TaskManageH.WebService\TaskManageH.WebService.csproj", "{EDB0EB00-23A6-409B-89C6-7DF9B5B12E0A}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E2E5EFB8-9BC0-4D31-AAAF-958983E3D43E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{EDB0EB00-23A6-409B-89C6-7DF9B5B12E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDB0EB00-23A6-409B-89C6-7DF9B5B12E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDB0EB00-23A6-409B-89C6-7DF9B5B12E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2E5EFB8-9BC0-4D31-AAAF-958983E3D43E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2E5EFB8-9BC0-4D31-AAAF-958983E3D43E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2E5EFB8-9BC0-4D31-AAAF-958983E3D43E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2E5EFB8-9BC0-4D31-AAAF-958983E3D43E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
