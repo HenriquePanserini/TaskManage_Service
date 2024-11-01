@@ -33,7 +33,7 @@ public class AppDbContext : IdentityDbContext<Usuario>
 
     public string ObterStringConexao()
     {
-        string strcon = "Data Source=db,1433;Database=TaskManageH_2024;User Id=sa;Password=Ops@123456;Trusted_Connection=True;";
+        string strcon = "Data Source=DESKTOP-JDDJMQ9\\SQLEXPRESS;Initial Catalog=TaskManageH_2024;Trusted_Connection=True;Connect Timeout=30;";
         return strcon;
     }
 }

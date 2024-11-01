@@ -61,7 +61,7 @@ namespace TaskManageH.Aplicacao_.Servico
 
         public async Task<List<Tarefas>> ListarTarefasAtivas()
         {
-            return await _repositorioTarefas.ListarTarefas(n => n.Status == StatusTarefa.Concluida);
+            return await _repositorioTarefas.ListarTarefas(n => n.Status == StatusTarefa.Pendente);
         }
     }
 }

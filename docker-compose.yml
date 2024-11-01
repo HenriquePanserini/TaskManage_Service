@@ -1,11 +1,11 @@
-version: '3.8'
+version: '3.4'
 
 services:
   db:
     image: mcr.microsoft.com/mssql/server:2019-latest
     environment:
-      SA_PASSWORD: Ops@123456
-      ACCEPT_EULA: "Y"
+      - SA_PASSWORD=Ops@123456
+      - ACCEPT_EULA=Y
     ports:
       - 8002:1433
     volumes:
@@ -19,11 +19,11 @@ services:
       context: .
       dockerfile: TaskManageH.WebService/Dockerfile
     ports:
-      - 8001:80 
+      - 8001:80
     depends_on:
       - db
     environment:
-      - ConnectionStrings__DefaultConnection=Data Source=db,1433;Database=TaskManageH_2024;User Id=sa;Password=Ops@123456;Trusted_Connection=True;
+      - ConnectionStrings__DefaultConnection=Data Source=db;Initial Catalog=TaskManageH_2024;User Id=sa;Password=Ops@123456;Trusted_Connection=True;
     networks:
       - app-network
 
