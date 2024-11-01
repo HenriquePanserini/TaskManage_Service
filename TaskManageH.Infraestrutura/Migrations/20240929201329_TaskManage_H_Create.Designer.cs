@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace TaskManageH.Infraestrutura.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240919114609_new_create_1")]
-    partial class new_create_1
+    [Migration("20240929201329_TaskManage_H_Create")]
+    partial class TaskManage_H_Create
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -183,7 +183,8 @@ namespace TaskManageH.Infraestrutura.Migrations
                         .HasColumnType("nvarchar(500)")
                         .HasColumnName("Descricao");
 
-                    b.Property<DateTime>("Prazo")
+                    b.Property<DateTime?>("Prazo")
+                        .IsRequired()
                         .HasColumnType("datetime")
                         .HasColumnName("Prazo");
 

@@ -181,7 +181,8 @@ namespace TaskManageH.Infraestrutura.Migrations
                         .HasColumnType("nvarchar(500)")
                         .HasColumnName("Descricao");
 
-                    b.Property<DateTime>("Prazo")
+                    b.Property<DateTime?>("Prazo")
+                        .IsRequired()
                         .HasColumnType("datetime")
                         .HasColumnName("Prazo");
 

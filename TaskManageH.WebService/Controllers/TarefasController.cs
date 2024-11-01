@@ -22,7 +22,7 @@ namespace TaskManageH.WebService.Controllers
 
         [Authorize]
         [Produces("application/json")]
-        [HttpGet("/api/taregas/List")]
+        [HttpGet("/api/tarefas/List")]
         public async Task<List<Tarefas>> ListarTarefas()
         {
             return await _aplicacaoTarefas.ListarTarefasAtivas();        
