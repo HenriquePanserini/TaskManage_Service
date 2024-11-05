@@ -67,20 +67,29 @@ namespace TaskManageH.Aplicacao_.Servico
 
         public async Task<List<TarefasViewModel>> ListarTarefasCustom()
         {
-            var listarNoticiasCustom = await _repositorioTarefas.ListarTarefasCustom();
+            var listarTarefasCustom = await _repositorioTarefas.ListarTarefasCustom();
 
             var response = (
-                    from noticia in listarNoticiasCustom
+                    from tarefas in listarTarefasCustom
                     select new TarefasViewModel
                     {
-                        Id = noticia.Id,
-                        Titulo = noticia.Titulo,
-                        Descricao = noticia.Descricao,
-
+                        Id = tarefas.Id,
+                        Titulo = tarefas.Titulo,
+                        Descricao = tarefas.Descricao,
+                        Status = (int)tarefas.Status,
+                        Prioridade = (int)tarefas.Prioridade,
+                        DataCriacao = string.Concat(tarefas.DataCriacao.Day, "/", tarefas.DataCriacao.Month, "/", tarefas.DataCriacao.Year),
+                        Usuario = SeparaEmail(tarefas.Usuario.Email),
                     }     
                 ).ToList();
 
             return response;
+        }
+
+        private string SeparaEmail(string email)
+        {
+            var stringEmail = email.Split('@');
+            return stringEmail[0].ToString();
         }
     }
 }
