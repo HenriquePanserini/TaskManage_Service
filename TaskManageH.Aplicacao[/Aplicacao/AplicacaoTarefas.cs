@@ -63,5 +63,9 @@ namespace TaskManageH.Aplicacao_.Aplicacao
             return   await _repositorioTarefas.Listar();
         }
 
+        public Task<List<Tarefas>> ListarTarefasCustom()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -13,7 +13,10 @@ namespace TaskManageH.Dominio.ViewModel
         public string Descricao { get; set; }
         public int Prioridade { get; set; }
         public int Status { get; set; }
-        public DateTime DataCriacao { get; set; }
+        public string Prazo { get; set; }
+        public string DataCriacao { get; set; }
+        public string Usuario { get; set; }
+
 
     }
 }

@@ -14,5 +14,6 @@ namespace TaskManageH.Aplicacao_.Interface
         Task AdicionaTarefas(Tarefas tarefas, StatusTarefa statusTarefa, PrioridadeTarefa prioridade);
         Task AtualizaTarefas(Tarefas tarefas, StatusTarefa statusTarefa, PrioridadeTarefa prioridade);
         Task<List<Tarefas>> ListarTarefasAtivas();
+        Task<List<Tarefas>> ListarTarefasCustom();
     }
 }
