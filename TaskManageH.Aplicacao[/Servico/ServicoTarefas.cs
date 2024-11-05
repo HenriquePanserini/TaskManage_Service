@@ -76,6 +76,7 @@ namespace TaskManageH.Aplicacao_.Servico
                         Id = noticia.Id,
                         Titulo = noticia.Titulo,
                         Descricao = noticia.Descricao,
+
                     }     
                 ).ToList();
 
