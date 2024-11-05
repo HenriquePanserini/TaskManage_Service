@@ -13,5 +13,7 @@ namespace TaskManageH.Dominio.Interfaces
     public interface IRepositorioTarefas : IRepositorioBase<Tarefas>
     {
         Task<List<Tarefas>> ListarTarefas(Expression<Func<Tarefas, bool>> exTarefa);
+
+        Task<List<Tarefas>> ListarTarefasCustom();
     }
 }

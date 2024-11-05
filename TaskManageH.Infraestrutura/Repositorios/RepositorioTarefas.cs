@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -26,6 +27,29 @@ namespace TaskManageH.Infraestrutura.Repositorios
             using (var data = new AppDbContext(_optionsbuilder))
             {
                 return await data.Tarefas.Where(exTarefa).AsNoTracking().ToListAsync();
+            }
+        }
+
+        public Task<List<Tarefas>> ListarTarefasCustom()
+        {
+            using (var data = new AppDbContext(_optionsbuilder))
+            {
+                var listaTarefas = ( from tarefas in data.Tarefas
+                                     join usuario in data.Usuario
+                                     on tarefas.UsuarioId equals usuario.Id
+                                     select new Tarefas
+                                     {
+                                         Id = tarefas.Id,
+                                         Descricao = tarefas.Descricao,
+                                         Titulo = tarefas.Titulo,
+                                         DataConclusao = tarefas.DataConclusao,
+                                         DataCriacao = tarefas.DataCriacao,
+                                         Usuario = usuario
+                                         
+                                     }
+                                     ).AsNoTracking().ToListAsync();
+
+                return listaTarefas;
             }
         }
     }

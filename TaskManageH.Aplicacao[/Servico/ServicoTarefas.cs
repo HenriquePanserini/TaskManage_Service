@@ -8,6 +8,7 @@ using TaskManageH.Dominio.Entidades;
 using TaskManageH.Dominio.Enum;
 using TaskManageH.Dominio.Interfaces;
 using TaskManageH.Dominio.Interfaces.Base;
+using TaskManageH.Dominio.ViewModel;
 
 namespace TaskManageH.Aplicacao_.Servico
 {
@@ -62,6 +63,24 @@ namespace TaskManageH.Aplicacao_.Servico
         public async Task<List<Tarefas>> ListarTarefasAtivas()
         {
             return await _repositorioTarefas.ListarTarefas(n => n.Status == StatusTarefa.Pendente);
+        }
+
+        public async Task<List<TarefasViewModel>> ListarTarefasCustom()
+        {
+            var listarNoticiasCustom = await _repositorioTarefas.ListarTarefasCustom();
+
+            var response = (
+                    from noticia in listarNoticiasCustom
+                    select new TarefasViewModel
+                    {
+                        Id = noticia.Id,
+                        Titulo = noticia.Titulo,
+                        Descricao = noticia.Descricao,
+
+                    }     
+                ).ToList();
+
+            return response;
         }
     }
 }
